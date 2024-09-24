@@ -14,19 +14,19 @@
             <div class="topnav">
                 <h1>AP</h1>
                 <ul>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Resume</li>
-                    <li>Skill</li>
-                    <li>Contact</li>
-                    <button type="button">Hire Me!</button>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#services"><li>Services</li></a>
+                    <a href="#resume"><li>Resume</li></a>
+                    <a href="#skill"><li>Skill</li></a>
+                    <a href="#contact"><li>Contact</li></a>
+                    <button type="button" >Hire Me!</button>
                 </ul>
             </div>
             <!-- hero section -->
-            <div class="hero">
+            <div class="hero" id="home">
                 <div class="about">
-                    <h1>I am Ankamah Prince</h1>
-                    <h1 style="font-size: 40px;">UI/UX Designer & Frontend Developer</h1>
+                    <h1>Hi, I am Ankamah Prince</h1>
+                    <h1 style="font-size: 40px;"><span>UI/UX Designer</span> & <span>Frontend Developer</span></h1>
                     <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Praesentium accusantium cumque aperiam suscipit error. 
                     Molestias dolorem facere provident autem aperiam </p><br>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- services section -->
-        <div class="services-section">
+        <div class="services-section" id="services">
             <h1 style="font-size: 40px;">Services</h1>
             <div class="services">
                 <!-- cards -->
@@ -90,7 +90,7 @@
             </div>
         </div>
         <!-- resume -->
-        <div class="resume">
+        <div class="resume" id="resume">
             <div class="experience-section"><p style="font-size: 40px;">Experience</p>
                 <div class="exp-card">
                     <h3>2023 - Present</h3>
@@ -117,58 +117,63 @@
             </div>
         </div>
         <!-- skill -->
-        <div class="skill">
+        <div class="skill" id="skill">
             <p style="font-size: 40px;">Skills</p>
             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                 Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             <div class="skill-section">
                 <!-- cards -->
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                 <div class="skill-set-1">
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/design.png" alt="UI/UX Design" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">92%</p>
+                        </div>
+                            <h2>UI Design</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/html.png" alt="Html" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">80%</p>
+                        </div>
+                            <h2>Web Dev</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/vision_9677976.png" alt="Programming" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">75%</p>
+                        </div>
+                            <h2>Programming</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                 </div>
+                 <div class="skill-set-2">
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/react.png" alt="React" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">30%</p>
+                        </div>
+                            <h2>React</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/flutter.png" alt="Flutter" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">56%</p>
+                        </div>
+                            <h2>Flutter</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
-                <div class="skill-card">
-                    <div class="s-card">
-                        <img src="/assets/icons/feather/figma.svg" alt="Figma" >
-                        <p style="font-size: 30px;">90%</p>
+                    <div class="skill-card">
+                        <div class="s-card">
+                            <img src="/assets/image/website.png" alt="Prototyping" >
+                            <p style="font-size: 30px; font-family: 'Roboto';">90%</p>
+                        </div>
+                            <h2>Prototyping</h2>
                     </div>
-                        <h2>Figma</h2>
-                </div>
+                 </div>
+                
             </div>
         </div>
         <!-- contact -->
-        <div class="contact">
+        <div class="contact" id="contact">
                 <form action="#">
                     <div class="title">
                         <h2>Let's work together!</h2>
@@ -199,7 +204,8 @@
             </div>
         </div>
         <footer>
-            
+            <hr>
+            <p>Copyright@ankamahprince</p>
         </footer>
     </div>
 </body>

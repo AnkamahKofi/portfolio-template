@@ -1,33 +1,45 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'RadioGrotesk';
+    font-family: 'RadioGrotesk', 'Roboto';
 }
 @font-face {
     font-family: 'RadioGrotesk';
-    src: url(/assets/font/RadioGrotesk/RadioGrotesk-Regular.otf),
+    src: url(/assets/fonts/RadioGrotesk/RadioGrotesk-Regular.otf),
     format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(/assets/fonts/Roboto-Regular.ttf),
+    format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 /* main-container */
 .container{
-    background-color: #000000;
-    /* height:100%; */
-    color: #ffffff;
+    background-color: #0f0f0f;
+    width: 100;
+    color: #f5f5f5;
     display: flex;
     flex-direction: column;
     padding-left:120px;
     padding-right:120px;
     gap: 50px;
-    scroll-behavior: smooth;
+    justify-content: space-between;
 }
+
 /* top-navigation-bar */
 .topnav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 0px;
+}
+.topnav a{
+    text-decoration: none;
+    color: #f5f5f5;
 }
 .topnav ul li{
     list-style: none;
@@ -39,11 +51,17 @@
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 900;
     justify-content: space-evenly;
     align-items: center;
 }
+.topnav ul button:hover{
+    scale: 1.05;
+    transition: 500ms;
+    cursor: pointer;
+}
+
 /* hero-section */
 .hero{
     display: flex;
@@ -63,9 +81,18 @@
     padding-top: 25px;
     text-wrap: wrap;
 }
+.about span{
+    background: linear-gradient(45deg,#1e90ff, #6F00D0);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 .about button{
+    background-color: transparent;
     padding: 10px 30px 10px 10px;
-    border: none;
+    color: #0f0f0f;
+    border: 1px solid #0f0f0f;
     width: 170px;
     border-radius: 20px;
     font-size: 17px;
@@ -74,12 +101,29 @@
     background-image: url(/assets/icons/feather/download.svg);
     background-repeat: no-repeat;
     background-position: right 15px center;
+    filter: invert(1);
+}
+.about button:hover{
+    background-color: #f5f5f5;
+    color: #0f0f0f;
+    border: none;
+    cursor: pointer;
+    transition: 450ms;
+    filter: invert(0);
 }
 .photo{
     height: 45vh;
     width: 400px;
-    background-color: #2c2c2c;
+    background-image: url(/assets/image/prince.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
     border-radius: 20px;
+}
+.photo p{
+    display: flex;
+    flex-direction: column;
+
 }
 .info{
     display: flex;
@@ -110,14 +154,14 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap:wrap;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
 }
 /* cards */
 .service-card{
     background-color: #2c2c2c;
     height: 250px;
-    width: 300px;
+    width: 25%;
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -173,28 +217,37 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
 .skill-section{
     display: flex;
     width: 100%;
-    height: 200px;
+    gap: 50px;
+    height: fit-content;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+.skill-set-1, .skill-set-2{
+    display: flex;
+    flex: 1;
     justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 /* skill card + skill name */
 .skill-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-wrap: wrap;
 }
 /* skill card with percentage */
 .s-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 65%;
+    height: 150px;
     width: 100px;
     padding: 20px;
     background-color: #2c2c2c;
@@ -276,4 +329,218 @@ form button{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+/* footer */
+footer{
+    padding-top: 40px;
+    text-align: center;
+}
+hr{
+    border: none;
+    border-top: 2px solid #3b3b3b; 
+    width: 100%;
+    margin: 0 auto 10px auto; 
+}
+footer p{
+    padding-bottom: 40px;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .hero {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .about {
+        width: 100%; 
+        align-content: center;
+    }
+
+    .photo {
+        width: 100%; /* Reduce size of photo */
+        height: 35vh;
+    }
+
+    .services {
+        gap: 20px; 
+        width: 70%;/* Reduce gap between service cards */
+    }
+
+    .service-card {
+        width: 200px; /* Adjust card size */
+    }
+}
+
+/* For screens between 992px and 1199px (Tablets, smaller desktops) */
+@media (max-width: 992px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about, .photo {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .photo {
+        height: 30vh; /* Reduce photo height */
+    }
+
+    .info {
+        flex-direction: column; /* Stack info items vertically */
+        gap: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 70%; /* Allow service cards to take more space */
+    }
+
+    .resume {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-section, .education-section {
+        width: 100%; /* Full width for experience and education sections */
+    }
+}
+
+/* For screens between 768px and 991px (Tablets, smaller devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .hero{
+        flex-wrap: wrap;
+    }
+    .topnav ul li {
+        padding: 10px; 
+    }
+
+    .topnav ul button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .services {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact form, .details {
+        width: 100%; /* Full width for both form and details */
+    }
+
+    .contact {
+        gap: 40px; /* Reduce gap between form and contact details */
+    }
+}
+
+/* For screens 576px and smaller (Mobile devices) */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .topnav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .topnav ul li {
+        display: block; /* Display nav items as block */
+        padding: 5px;
+    }
+
+    .topnav ul button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .about h1 {
+        font-size: 28px; /* Smaller heading size */
+    }
+    .hero button{
+        align-self: center;
+    }
+    .about h1[style] {
+        font-size: 20px; /* Smaller subheading */
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services {
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 100%; /* Full width for service cards */
+    }
+
+    .resume {
+        gap: 10px;
+    }
+
+    .exp-card, .edu-card {
+        height: auto;
+        padding: 15px;
+    }
+
+    .skill-section {
+        flex-direction: column; /* Stack skill cards vertically */
+        gap: 20px;
+    }
+
+    .s-card {
+        width: 80px; /* Reduce skill card width */
+    }
+
+    .contact form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    hr {
+        margin: 10px auto;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
 }
