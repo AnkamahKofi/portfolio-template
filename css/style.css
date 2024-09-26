@@ -20,7 +20,6 @@
 /* main-container */
 .container{
     background-color:  #f5f5f5;
-    width: 100;
     color: #0f0f0f;
     display: flex;
     flex-direction: column;
@@ -48,17 +47,18 @@
     justify-content: space-evenly;
 }
 .topnav ul button{
-    padding: 10px 20px;
-    border: none;
+    padding: 5px 20px;
+    border: 2px dashed #0f0f0f ;
     border-radius: 20px;
     font-size: 17px;
     font-weight: 900;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #0f0f0f;
-    color: #f5f5f5;
+    color: #0f0f0f;
 }
 .topnav ul button:hover{
+    background-color: #0f0f0f;
+    color: #f5f5f5;
     scale: 1.05;
     transition: 500ms;
     cursor: pointer;
@@ -92,9 +92,9 @@
 }
 .about button{
     background-color: transparent;
-    padding: 10px 30px 10px 10px;
+    padding: 8px 30px 8px 10px;
     color: #0f0f0f;
-    border: 1px solid #0f0f0f;
+    border: 2px dashed #0f0f0f;
     width: 170px;
     border-radius: 20px;
     font-size: 17px;
@@ -116,7 +116,7 @@
 .photo{
     height: 45vh;
     width: 400px;
-    background-image: url(/assets/image/prince.jpeg);
+    background-image: url(/assets/image/Prince.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -146,6 +146,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 40px;
 }
 .services{
     display: flex;
@@ -223,45 +224,48 @@
     align-items: center;
     text-align: center;
 }
-.skill-section{
+.skill-section {
     display: flex;
     width: 100%;
-    gap: 50px;
+    gap: 30px; /* Reduced gap for better layout */
     height: fit-content;
     justify-content: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap; /* Allow wrapping of skill sets */
 }
-.skill-set-1, .skill-set-2{
+
+.skill-set {
     display: flex;
-    flex: 1;
+    flex-direction: row; 
     justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
+    width: 250px; /* Set a fixed width for each skill set */
+    flex: 1;
+    flex-wrap: wrap
 }
-/* skill card + skill name */
-.skill-card{
+
+.skill-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-wrap: wrap;
+    margin-bottom: 20px; /* Add margin for spacing between cards */
 }
-/* skill card with percentage */
-.s-card{
+.s-card img {
+    justify-content: center;
+    align-self: center;
+    height: 70%;
+    width: auto; /* Change width to auto for better image scaling */
+}
+/* Skill card with percentage */
+.s-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 150px;
-    width: 100px;
     padding: 20px;
     background-color: #c4c4c4;
     border-radius: 8px;
 }
-.s-card img{
-    justify-content: center;
-    align-self: center;
-    height: 70%;
-    width: 100;
-}
+
+
 
 /* contact */
 .contact{
@@ -296,7 +300,7 @@ form .title{
 }
 input{
     flex: 1 1 70px;
-    color: #ffffff;
+    color: #0f0f0f;
     border: 2.5px solid #2c2c2c;
     border-radius: 4px;
     background-color: transparent;
@@ -395,7 +399,9 @@ footer p{
         align-items: center;
         text-align: center;
     }
-
+    .hero button{
+        align-self: center;
+    }
     .about, .photo {
         width: 100%; 
     }
@@ -505,9 +511,11 @@ footer p{
 
     .services {
         gap: 10px;
+        width: 90%;
     }
 
     .service-card {
+        height: fit-content;
         width: 100%; /* Full width for service cards */
     }
 
@@ -523,10 +531,24 @@ footer p{
     .skill-section {
         flex-direction: column; /* Stack skill cards vertically */
         gap: 20px;
+        
     }
-
+    .skill-set{
+        height: fit-content;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .skill-set h2{
+        font-size: large;
+    }
+    .skill-card{
+        align-items: center;
+        justify-content: space-between;
+    }
     .s-card {
-        width: 80px; /* Reduce skill card width */
+        justify-self: center;
+        width: 150px; /* Reduce skill card width */
     }
 
     .contact form {
