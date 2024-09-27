@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- main container -->
@@ -13,6 +14,7 @@
             <!-- top navigation bar -->
             <div class="topnav">
                 <h1>AP</h1>
+                <span class="menu-icon">&#9776;</span>
                 <ul>
                     <a href="#home"><li>Home</li></a>
                     <a href="#services"><li>Services</li></a>
@@ -22,6 +24,12 @@
                     <button type="button" >Hire Me!</button>
                 </ul>
             </div>
+            <script>
+                 // jQuery to toggle the menu links on click of the menu icon
+                $(".menu-icon").click(function() {
+                    $("nav ul").toggle(); // Toggle the visibility of the nav links
+                });
+            </script>
             <!-- hero section -->
             <div class="hero" id="home">
                 <div class="about">
@@ -181,7 +189,7 @@
                 <form action="#">
                     <div class="title">
                         <h2>Let's Engage!</h2>
-                        <p> With my skills in UI/UX design and web development i will ensure that every detail is crafted to perfection, creating user-friendly experiences that captivate and engage. Let’s collaborate and Take over the world👀... I mean turn your ideas into reality 😅—because great design starts with a conversation!</p>    
+                        <p> With my skills in UI/UX design and web development I will ensure that every detail is crafted to perfection, creating user-friendly experiences that captivate and engage. Let’s collaborate and Take over the world👀... I mean turn your ideas into reality 😅—because great design starts with a conversation!</p>    
                     </div>
                     <div class="credentials">
                         <input type="text" id="f-name" placeholder="First Name">

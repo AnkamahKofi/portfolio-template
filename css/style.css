@@ -36,6 +36,13 @@
     justify-content: space-between;
     padding: 15px 0px;
 }
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+}
 .topnav a{
     text-decoration: none;
     color: #0f0f0f;
@@ -477,9 +484,12 @@ footer p{
         padding-left: 10px;
         padding-right: 10px;
     }
-
+    .menu-icon {
+        display: block;
+        color: #0f0f0f;
+    }
     .topnav ul {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 10px;
