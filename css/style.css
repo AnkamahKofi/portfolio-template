@@ -58,6 +58,7 @@
 }
 .topnav ul button:hover{
     background-color: #0f0f0f;
+    border: none;
     color: #f5f5f5;
     scale: 1.05;
     transition: 500ms;
@@ -114,15 +115,18 @@
     filter: invert(1);
 }
 .photo{
-    height: 45vh;
-    width: 400px;
+    height: 50vh;
+    width: 450px;
     background-image: url(/assets/image/Prince.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    border-radius: 20px;
+    border-radius: 30px;
 }
-
+.photo:hover{
+    transform: scale(1.05);
+    transition: 700ms;
+}
 .info{
     display: flex;
     justify-content: space-between;
@@ -239,14 +243,14 @@
     justify-content: space-between;
     width: 250px; /* Set a fixed width for each skill set */
     flex: 1;
-    flex-wrap: wrap
 }
 
 .skill-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px; /* Add margin for spacing between cards */
+    margin-bottom: 20px;
+    font-size:small;
 }
 .s-card img {
     justify-content: center;
@@ -537,7 +541,7 @@ footer p{
         height: fit-content;
         flex-wrap: nowrap;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .skill-set h2{
         font-size: large;
@@ -548,7 +552,7 @@ footer p{
     }
     .s-card {
         justify-self: center;
-        width: 150px; /* Reduce skill card width */
+        width: 100px; /* Reduce skill card width */
     }
 
     .contact form {
